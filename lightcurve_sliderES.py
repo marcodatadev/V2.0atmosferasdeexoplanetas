@@ -166,7 +166,13 @@ def lightcurve_slider(free_radius=True,free_impact=False,savePlot=False):
     plot1 = figure(y_range=(97.5, 100.2), width=400, height=200,tools="")
 
     plot1.line('x', 'y', source=source, line_width=3, line_alpha=0.6)
-    plot1.circle('time_now','flux_now',size='marker_size',source=source_planet,color='green')
+    plot1.scatter(
+    'time_now', 'flux_now',
+    source=source_planet,
+    marker='circle',
+    size='marker_size',
+    color='green',
+	)
 
     plot1.title.text = 'Curva de luz'
     plot1.xaxis.axis_label = "Tiempo al Centro del Tránsito (horas)"
