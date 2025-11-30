@@ -424,7 +424,14 @@ def transmission_spec_slider(mysteryNum=1,savePlot=False):
     plot2.yaxis.axis_label = "Radio (Radios Terrestres)"
     plot2.xaxis.axis_label_text_font_size = axes_font_size
     plot2.yaxis.axis_label_text_font_size = axes_font_size
-    plot2.square('w','rad',source=source,line_width=3,fill_color='colors',size=16)
+    plot2.scatter(
+    'w', 'rad',
+    source=source,
+    marker='square',
+    line_width=3,
+    fill_color='colors',
+    size=16,
+	)
     plot2.title.text = 'Gráfica del Espectro'
     
     slider_list = []
